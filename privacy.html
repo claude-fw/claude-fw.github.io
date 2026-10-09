@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informativa sulla privacy — Gmail privato — Cloud</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif; max-width: 42rem; margin: 3rem auto; padding: 0 1rem; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 2rem; }
+  footer { margin-top: 3rem; font-size: .9rem; opacity: .75; }
+</style>
+</head>
+<body>
+<h1>Informativa sulla privacy</h1>
+<p><strong>Gmail privato — Cloud</strong> · Ultimo aggiornamento: 9 ottobre 2026</p>
+
+<h2>Chi gestisce l'applicazione</h2>
+<p>Gmail privato — Cloud è un'applicazione personale e non commerciale, gestita da un privato per uso
+proprio. L'unico utente è il proprietario: l'accesso è limitato tecnicamente a un solo account Google
+e ogni altro account viene rifiutato. Contatto:
+<a href="mailto:fcm.wetter@gmail.com">fcm.wetter@gmail.com</a>.</p>
+
+<h2>Dati a cui accede</h2>
+<p>Con gli scope <code>openid</code>, <code>email</code>, <code>gmail.readonly</code> e
+<code>gmail.modify</code> l'applicazione accede a:</p>
+<ul>
+  <li>indirizzo email e identificativo dell'account Google, per verificare che sia l'account autorizzato;</li>
+  <li>messaggi, conversazioni, etichette e bozze del Gmail dell'utente, <strong>solo quando l'utente
+      lo chiede</strong> all'assistente Claude.</li>
+</ul>
+
+<h2>Come usa i dati</h2>
+<p>I dati servono solo a eseguire le richieste dell'utente: cercare e leggere email, organizzarle,
+preparare bozze e, dopo una conferma esplicita dell'utente, inviare una bozza o spostare messaggi nel
+cestino. Il contenuto delle email viene trasmesso a Claude (Anthropic) solo come risposta alla richiesta
+dell'utente, per mostrargliela o elaborarla.</p>
+<p>I dati non vengono venduti, non sono usati per pubblicità o profilazione e non sono condivisi con
+altri, salvo i fornitori tecnici indicati sotto. Nessuna persona li legge, a parte l'utente stesso.</p>
+
+<h2>Cosa viene conservato</h2>
+<ul>
+  <li><strong>Contenuto delle email:</strong> non viene archiviato. Viene letto da Gmail al momento
+      della richiesta e restituito a Claude.</li>
+  <li><strong>Credenziali di accesso Google</strong> (token OAuth) e indirizzo dell'account: conservati in
+      forma cifrata sull'infrastruttura Cloudflare finché il collegamento resta attivo, per non dover
+      ripetere l'accesso a ogni richiesta.</li>
+  <li><strong>Azioni in attesa di conferma</strong> (invio, cestino, operazioni su molti messaggi):
+      identificativi dei messaggi e un'anteprima limitata (destinatari, oggetto, inizio del testo fino a
+      2.000 caratteri, nomi degli allegati; per le altre azioni mittente e oggetto di al massimo 10
+      messaggi). Sono utilizzabili per al massimo un'ora e vengono eliminate quando si crea un'azione
+      successiva.</li>
+  <li><strong>Stato temporaneo dell'accesso:</strong> dati tecnici del login OAuth, validi 10 minuti.</li>
+  <li><strong>Registri:</strong> l'applicazione non registra richieste né contenuti; la registrazione
+      dei log della piattaforma è disattivata.</li>
+</ul>
+
+<h2>Fornitori tecnici</h2>
+<ul>
+  <li><strong>Google</strong>: Gmail API e accesso OAuth.</li>
+  <li><strong>Cloudflare</strong>: esecuzione dell'applicazione (Cloudflare Workers) e archiviazione
+      delle credenziali cifrate e delle azioni in attesa.</li>
+  <li><strong>Anthropic</strong>: l'assistente Claude, che riceve i dati richiesti dall'utente nella
+      conversazione, secondo le condizioni dell'account Claude dell'utente.</li>
+</ul>
+
+<h2>Uso limitato dei dati Google</h2>
+<p>L'uso e il trasferimento ad altre applicazioni delle informazioni ricevute dalle API Google
+rispettano le <a href="https://developers.google.com/terms/api-services-user-data-policy">Norme sui dati
+utente dei servizi API di Google</a> (Google API Services User Data Policy), compresi i requisiti di
+uso limitato (Limited Use).</p>
+
+<h2>Revoca e cancellazione</h2>
+<ul>
+  <li>Revoca dell'accesso: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+      Le credenziali conservate smettono di funzionare.</li>
+  <li>Dal lato Claude, il connettore si può scollegare nelle impostazioni dei connettori.</li>
+  <li>L'applicazione non elimina definitivamente le email e non tocca impostazioni o filtri di Gmail.</li>
+</ul>
+
+<h2>Sicurezza</h2>
+<p>Comunicazioni solo in HTTPS. L'accesso richiede l'account Google autorizzato e una passphrase.
+Le azioni sensibili richiedono una conferma separata con un'altra passphrase. Le credenziali sono
+conservate cifrate e mai registrate nei log.</p>
+
+<h2>Modifiche</h2>
+<p>Le modifiche a questa informativa vengono pubblicate su questa pagina, con la data di aggiornamento.</p>
+
+<h2 lang="en">Summary (English)</h2>
+<p lang="en">Gmail privato — Cloud is a personal, non-commercial app used only by its owner, and access is
+restricted to a single Google account. It reads and organizes that account's Gmail, prepares drafts, and
+sends or trashes messages only after explicit confirmation by the owner. Email content is not stored:
+it is fetched on request and returned to the owner's Claude assistant. OAuth tokens are stored
+encrypted on Cloudflare while the connection is active. No request or content logging. Data is not sold,
+not used for advertising and not shared beyond Google, Cloudflare and Anthropic as described above. Use
+of Google API data complies with the Google API Services User Data Policy, including the Limited Use
+requirements. Access can be revoked at myaccount.google.com/permissions. Contact:
+fcm.wetter@gmail.com.</p>
+
+<footer><a href="index.html">Gmail privato — Cloud</a></footer>
+</body>
+</html>
